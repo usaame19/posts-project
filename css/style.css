@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400;500;600;700&family=Foldit:wght@200;300;400;500;600;700;800;900&family=Jockey+One&family=Kablammo&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colors */
+    --primary-color: #27262C;
+    --second-color: #4044ED;
+    --third-color: #93DFFF;
+    --bg-color: #424242;
+    --h2-color: white;
+    --muted-color: mix(white, #4044ED, 70%);
+    --trans-time: 300ms;
+    --width: 320px;
+    --Cedarville-family: 'Cedarville Cursive', cursive;
+    --Dancing-family: 'Dancing Script', cursive;
+    --Foldit-family: 'Foldit', cursive;
+    --Jockey-family: 'Jockey One', sans-serif;
+    --Kablammo-family: 'Kablammo', cursive;
+}
+
+
+
+
+body {
+    background-color: var(--primary-color);
+}
+
+.loginH2 {
+    color: var(--h2-color);
+    opacity: 0.7;
+    font-family: var(--Cedarville-family);
+    font-size: 40px;
+}
+
+.rightImg {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 320px;
+    height: 300px;
+}
+
+.buttonRight {
+    position: absolute;
+    right: 0;
+    top: 330px;
+    width: 320px;
+    height: 300px;
+    opacity: 0.5;
+
+}
+
+.leftImg {
+    position: absolute;
+    left: 0;
+    width: 187px;
+    height: 465px;
+    opacity: 0.5;
+
+}
+
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 50%;
+    top: 40px;
+    gap: 30px;
+}
+
+input {
+    background: none;
+    color: var(--third-color);
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 320px;
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid var(--second-color);
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    background: #fff;
+    color: mix(black, var(--muted-color), 25%);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.btn:hover {
+    color: var(--third-color);
+    background-color: var(--second-color);
+    box-shadow: 0 7px 14px rgba(212, 32, 32, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+#signUp{
+    color: var(--third-color);
+    margin-top: -20px;
+}
+#signUp a{
+    color: var(--second-color);
+    text-decoration: none;
+}
+
+.error{
+    margin-top: -25px;
+    color: red;
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+    .buttonRight {
+        top: 420px;
+        width: 250px;
+        height: 250px;
+        opacity: 0.5;
+
+    }
+
+    .leftImg {
+        width: 135px;
+        height: 404px;
+        opacity: 0.5;
+
+    }
+
+    .rightImg {
+        width: 150px;
+        height: 190px;
+    }
+
+    #loginForm {
+        right: 10%;
+        top: 20%;
+        gap: 30px;
+        z-index: 1;
+
+    }
+
+    ::placeholder {
+        color: var(--third-color);
+        opacity: 1;
+    }
+}

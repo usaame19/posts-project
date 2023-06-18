@@ -1,0 +1,100 @@
+
+:root {
+    /* colors */
+    --primary-color: #27262C;
+    --second-color: #4044ED;
+    --third-color: #93DFFF;
+    --bg-color: #424242;
+    --h2-color: white;
+    --muted-color: mix(white, #4044ED, 70%);
+    --trans-time: 300ms;
+    --width: 320px;
+    --Cedarville-family: 'Cedarville Cursive', cursive;
+    --Dancing-family: 'Dancing Script', cursive;
+    --Foldit-family: 'Foldit', cursive;
+    --Jockey-family: 'Jockey One', sans-serif;
+    --Kablammo-family: 'Kablammo', cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--h2-color);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+}
+.addPost{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 30px;
+    margin: 30px;
+}
+input, textarea{
+    width: 320px;
+    height: 30px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 7px;
+    &:focus {
+        outline: none;
+        color: black;
+    }
+}
+textarea{
+    height: 200px;
+}
+
+.postsSection{
+    width: 40%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+    margin-left: 130px;
+}
+.posts{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    gap: 20px;
+}
+.image{
+    width: 300px;
+    height: 200px;
+    background-size: cover; 
+    background-position: center; 
+}
+.btn {
+    background: #41a7f0;
+    color: mix(black, var(--muted-color), 25%);
+    border: none;
+    margin-top: -50px;
+    margin-right: 29%;
+    padding: 10px 20px;
+    border-radius: 3px;
+    width: 21%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+.btn:hover {
+    color: var(--third-color);
+    background-color: var(--second-color);
+    box-shadow: 0 7px 14px rgba(212, 32, 32, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
