@@ -5,22 +5,22 @@ let smallErrors = document.querySelectorAll('.error');
 
 
 // check if email / password is empty 
-const checkEmpty = () => {
-    let isEmpty = false;
-    smallErrors.forEach(small => {
-        small.style.visibility = 'hidden';
-    });
+// const checkEmpty = () => {
+//     let isEmpty = false;
+//     smallErrors.forEach(small => {
+//         small.style.visibility = 'hidden';
+//     });
 
-    if (email.value.trim() === '') {
-        smallErrors[0].style.visibility = 'visible';
-        isEmpty = true;
-    }
-    if (password.value.trim() === '') {
-        smallErrors[1].style.visibility = 'visible';
-        isEmpty = true;
-    }
-    return isEmpty;
-}
+//     if (email.value.trim() === '') {
+//         smallErrors[0].style.visibility = 'visible';
+//         isEmpty = true;
+//     }
+//     if (password.value.trim() === '') {
+//         smallErrors[1].style.visibility = 'visible';
+//         isEmpty = true;
+//     }
+//     return isEmpty;
+// }
 
 
 function getDataFromLocalStorage() {
@@ -38,8 +38,8 @@ function getDataFromLocalStorage() {
 // eventListener for btn Click
 btn.addEventListener('click', function(event){
     event.preventDefault();
-    if( checkEmpty()){
-    return;
+    if( password.value.length === '' && password.value.length === ''){
+      return;
     } else{
         const emailValue = email.value;
         const passwordValue = loginPassword.value;
@@ -47,7 +47,12 @@ btn.addEventListener('click', function(event){
         if (user) {
             window.location.href = 'addPost.html';
           } else {
-            alert("please enter valid email/password or signUp")
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Something went wrong!',
+              footer: ' <h3> please enter valid Email/Password or <a href="signUp.html"> signUp</a></h3>'
+            })
           }
           email.value = '';
           loginPassword = '';

@@ -14,9 +14,10 @@ let postArticle = document.querySelector(".postArticle");
 
 // local storage
 function getDataStorage() {
-  const posts = localStorage.getItem("fromLocal");
-  return posts ? JSON.parse(posts) : [];
+  const createStorage = localStorage.getItem("fromLocal");
+  return createStorage ? JSON.parse(createStorage) : [];
 }
+
 
 function addPostToLocalStorage(post) {
   const posts = getDataStorage();

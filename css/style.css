@@ -48,7 +48,7 @@ body {
 .buttonRight {
     position: absolute;
     right: 0;
-    top: 330px;
+    top: 380px;
     width: 320px;
     height: 300px;
     opacity: 0.5;
@@ -127,7 +127,7 @@ input {
 
 @media only screen and (max-width: 600px) {
     .buttonRight {
-        top: 420px;
+        top: 490px;
         width: 250px;
         height: 250px;
         opacity: 0.5;

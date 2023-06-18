@@ -77,7 +77,7 @@ textarea{
     background-size: cover; 
     background-position: center; 
 }
-.btn {
+.btn, .lockOut{
     background: #41a7f0;
     color: mix(black, var(--muted-color), 25%);
     border: none;
@@ -97,4 +97,41 @@ textarea{
     color: var(--third-color);
     background-color: var(--second-color);
     box-shadow: 0 7px 14px rgba(212, 32, 32, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+.lockOut a{
+    text-decoration: none;
+    color: white;
+}
+.lockOut{
+    margin-top: 0;
+}
+.lockOut:hover {
+    color: var(--third-color);
+    background-color: var(--second-color);
+    box-shadow: 0 7px 14px rgba(212, 32, 32, 0.18), 0 5px 5px rgba(0, 0, 0, 0.12);
+}
+
+
+@media only screen and (max-width: 600px) {
+    .postsSection{
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+    }
+    .container{
+        align-items:normal;
+        margin: 20px;
+    }
+    .addPost{
+        margin: 0;
+    }
+    .btn, .lockOut{
+        margin-top: -29px;
+        width: 91%;
+    }
+    .lockOut{
+        display: flex;
+        justify-content: end;
+        width: 35%;
+    }
 }
